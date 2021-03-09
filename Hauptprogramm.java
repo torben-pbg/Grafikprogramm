@@ -9,10 +9,14 @@ public class Hauptprogramm
     private Bildschirm derBildschirm;
     private Maus dieMaus;
     private Tastatur dieTastatur;
+    private Figur aktiveFigur;    
+
     private Kreis meinKreis1;
     private Kreis meinKreis2;
     private Kreis meinKreis3;
-    private Kreis aktiverKreis;
+    private Quadrat meinQuadrat1;
+    private Quadrat meinQuadrat2;
+    private Quadrat meinQuadrat3;
 
     // Konstruktor
     public Hauptprogramm()
@@ -23,21 +27,17 @@ public class Hauptprogramm
         dieTastatur = new Tastatur();
         meinKreis1 = new Kreis(200, 25, 20, 600); 
         meinKreis2 = new Kreis(150, 230, 50, 1200); 
-        meinKreis3 = new Kreis(180, 120, 30, 200);
+        meinKreis3 = new Kreis(180, 120, 30, 200); 
     }
 
     // Dienste
     public void fuehreAus()
     {
         //Kreise werden gezeichnet
-        meinKreis1.zeichne();
-        meinKreis2.zeichne();
-        meinKreis3.zeichne();
 
         //der erste Kreis wird Standardmaessig aktiviert
-        aktiverKreis = meinKreis1;
-        aktiverKreis.aktiviere();
-        
+        aktiveFigur = meinKreis1;
+        aktiveFigur.aktiviere();
 
         do{
             //Hauptteil des Programmes
@@ -46,23 +46,23 @@ public class Hauptprogramm
             if(dieMaus.istGedrueckt())
             {
                 //Abfrage ob ein Kreis angeklickt wurde
-                aktiverKreis.deaktiviere();
+                aktiveFigur.deaktiviere();
                 if(meinKreis1.getroffen(dieMaus.hPosition(), dieMaus.vPosition()))
                 {
                     //Kreis 1 wird aktiviert
-                    //aktiverKreis = meinKreis1;
+                    aktiveFigur = meinKreis1;
                 }
                 else if(meinKreis2.getroffen(dieMaus.hPosition(), dieMaus.vPosition()))
                 {
                     //Kreis 2 wird aktiviert
-                    //aktiverKreis = meinKreis2;
+                    aktiveFigur = meinKreis2;
                 }
                 else if(meinKreis3.getroffen(dieMaus.hPosition(), dieMaus.vPosition()))
                 {
                     //Kreis 3 wird aktiviert
-                    //aktiverKreis = meinKreis3;
+                    aktiveFigur = meinKreis3;
                 }
-                aktiverKreis.aktiviere();
+                aktiveFigur.aktiviere();
             }
 
             //Der aktivierter Kreis wird mit den Pfeiltasten bewegt
@@ -70,10 +70,10 @@ public class Hauptprogramm
             {
                 switch (dieTastatur.zeichen())
                 {
-                    case Zeichen.PFEILRECHTS: aktiverKreis.bewegeUm(5,0); break;
-                    case Zeichen.PFEILLINKS: aktiverKreis.bewegeUm(-5,0); break;
-                    case Zeichen.PFEILOBEN: aktiverKreis.bewegeUm(0,-5); break;
-                    case Zeichen.PFEILUNTEN: aktiverKreis.bewegeUm(0,5); break;
+                    case Zeichen.PFEILRECHTS: aktiveFigur.bewegeUm(5,0); break;
+                    case Zeichen.PFEILLINKS: aktiveFigur.bewegeUm(-5,0); break;
+                    case Zeichen.PFEILOBEN: aktiveFigur.bewegeUm(0,-5); break;
+                    case Zeichen.PFEILUNTEN: aktiveFigur.bewegeUm(0,5); break;
                 }
                 dieTastatur.weiter();
             }

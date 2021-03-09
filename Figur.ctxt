@@ -1,0 +1,7 @@
+#BlueJ class context
+comment0.target=Figur
+comment0.text=\n\ Abstrakte\ Klasse\ Figur\ -\ beschreiben\ Sie\ hier\ die\ Klasse\n\ \n\ @author\ (Ihr\ Name)\n\ @version\ (eine\ Version-Nummer\ oder\ ein\ Datum)\n
+comment1.params=y
+comment1.target=int\ beispMethode(int)
+comment1.text=\n\ Ein\ Beispiel\ einer\ Methode\ -\ ersetzen\ Sie\ diesen\ Kommentar\ mit\ Ihrem\ eigenen\n\ \n\ @param\ \ y\ \ \ \ ein\ Beispielparameter\ f\u00FCr\ eine\ Methode\n\ @return\ \ \ \ \ \ \ \ die\ Summe\ aus\ x\ und\ y\n
+numComments=2
