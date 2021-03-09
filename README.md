@@ -1,3 +1,3 @@
 # SuM Grafikprogramm
-erstellt von TorbenPBG
+erstellt von TorbenPBG und MalvinGDK
 für den Informatikunterricht am Bert-Brecht-Gymnasium
