@@ -1,0 +1,19 @@
+#BlueJ class context
+comment0.target=Kreis
+comment0.text=\n\ @author\ Torben\ Piepenburg\n\ @version\ 0.1.1\n
+comment1.params=pH\ pV\ pGroesse\ pFarbe
+comment1.target=Kreis(int,\ int,\ int,\ int)
+comment1.text=\n\ Konstruktor\ f\u00FCr\ Objekte\ der\ Klasse\ Kreis\n
+comment2.params=
+comment2.target=void\ zeichne()
+comment3.params=
+comment3.target=void\ loesche()
+comment4.params=pH\ pV
+comment4.target=void\ bewegeUm(int,\ int)
+comment5.params=
+comment5.target=void\ aktiviere()
+comment6.params=
+comment6.target=void\ deaktiviere()
+comment7.params=pH\ pV
+comment7.target=boolean\ getroffen(int,\ int)
+numComments=8
