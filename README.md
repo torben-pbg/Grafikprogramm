@@ -1,2 +1,2 @@
 # sum-grafikprogramm
-created by Torben Piepenburg
+created by Torben PBG
